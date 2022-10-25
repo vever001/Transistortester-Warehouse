@@ -3,7 +3,7 @@
  *   global configuration, setup and settings
  *
  *   (c) 2012-2022 by Markus Reschke
- *   based on code from Markus Frejek and Karl-Heinz Kübbeler
+ *   based on code from Markus Frejek and Karl-Heinz K<FC>bbeler
  *
  * ************************************************************************ */
 
@@ -353,7 +353,7 @@
  *  - uncomment to enable
  */
 
-#define SW_PWM_PLUS
+//#define SW_PWM_PLUS
 
 
 /*
@@ -408,7 +408,7 @@
  *  - uncomment to enable
  */
 
-#define SW_SQUAREWAVE
+//#define SW_SQUAREWAVE
 
 
 /*
@@ -501,7 +501,7 @@
  *  - uncomment to enable
  */
 
-#define SW_SERVO
+//#define SW_SERVO
 
 
 /*
@@ -510,7 +510,7 @@
  *  - also enable ONEWIRE_PROBES or ONEWIRE_IO_PIN (see section 'Busses')
  */
 
-#define SW_DS18B20
+//#define SW_DS18B20
 
 
 /*
@@ -975,7 +975,7 @@
 /*
  *  Round some values if appropriate.
  *  - for
- *    - DS18B20 (0.1 °C/F)
+ *    - DS18B20 (0.1 ï¿½C/F)
  *  - uncomment to enable
  */
 
@@ -1191,9 +1191,9 @@
  *  Correction factors for capacitors (in 0.1%)
  *  - positive factor increases capacitance value
  *    negative factor decreases capacitance value
- *  - CAP_FACTOR_SMALL for caps < 4.7µF
- *  - CAP_FACTOR_MID for caps 4.7 - 47µF
- *  - CAP_FACTOR_LARGE for caps > 47µF
+ *  - CAP_FACTOR_SMALL for caps < 4.7ï¿½F
+ *  - CAP_FACTOR_MID for caps 4.7 - 47ï¿½F
+ *  - CAP_FACTOR_LARGE for caps > 47ï¿½F
  */
 
 #define CAP_FACTOR_SMALL      0      /* no correction */ 
@@ -1355,7 +1355,7 @@
  *  - uncomment either ONEWIRE_PROBES or ONEWIRE_IO_PIN to enable
  */
 
-#define ONEWIRE_PROBES             /* via probes */
+//#define ONEWIRE_PROBES             /* via probes */
 //#define ONEWIRE_IO_PIN             /* via dedicated I/O pin */
 
 
@@ -1426,7 +1426,7 @@
 
 
 /*
- *  number of MCU cycles per µs
+ *  number of MCU cycles per ï¿½s
  *  - min. 1 (for 1MHz)
  *  - max. 20 (for 20MHz)
  */
@@ -2098,3 +2098,4 @@
 /* ************************************************************************
  *   EOF
  * ************************************************************************ */
+
