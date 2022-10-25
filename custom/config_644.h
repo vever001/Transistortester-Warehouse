@@ -739,21 +739,21 @@
 /* display settings */
 #define LCD_DOTS_X       128            /* number of horizontal dots */
 #define LCD_DOTS_Y       160            /* number of vertical dots */
-//#define LCD_OFFSET_X     4               /* enable x offset of 2 or 4 dots */
-//#define LCD_OFFSET_Y     2               /* enable y offset of 1 or 2 dots */
+#define LCD_OFFSET_X     2               /* enable x offset of 2 or 4 dots */
+#define LCD_OFFSET_Y     1               /* enable y offset of 1 or 2 dots */
 #define LCD_FLIP_X                      /* enable horizontal flip */
 //#define LCD_FLIP_Y                      /* enable vertical flip */
 #define LCD_ROTATE                      /* switch X and Y (rotate by 90°) */
 //#define LCD_BGR                         /* reverse red and blue color channels */
 #define LCD_LATE_ON                     /* turn on LCD after clearing it */
 /* font and symbols: horizontally aligned & flipped */
-//#define FONT_10X16_HF                   /* 10x16 font */
+#define FONT_10X16_HF                   /* 10x16 font */
 //#define FONT_6X8_ISO8859_2_HF           /* 6x8 Central European font */
 //#define FONT_8X8_ISO8859_2_HF           /* 8x8 Central European font */
 //#define FONT_8X12T_ISO8859_2_HF         /* thin 8x12 Central European font */
 //#define FONT_8X16_ISO8859_2_HF          /* 8x16 Central European font */
 //#define FONT_10X16_ISO8859_2_HF         /* 10x16 Central European font */
-#define FONT_8X16_WIN1251_HF            /* 8x16 cyrillic font */
+//#define FONT_8X16_WIN1251_HF            /* 8x16 cyrillic font */
 //#define FONT_8X16ALT_WIN1251_HF         /* 8x16 alternative cyrillic font */
 #define SYMBOLS_30X32_HF                /* 30x32 symbols */
 //#define SYMBOLS_30X32_ALT1_HF           /* 30x32 alternative symbols #1 */

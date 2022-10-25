@@ -1067,7 +1067,7 @@
  *  - Voltage drop BAT_OFFSET is considered in calculation.
  */
 
-#define BAT_WEAK         3700
+#define BAT_WEAK         3600
 
 
 /*
@@ -1076,7 +1076,7 @@
  *  - Voltage drop BAT_OFFSET is considered in calculation.
  */
 
-#define BAT_LOW          3300 
+#define BAT_LOW          3400
 
 
 /*
