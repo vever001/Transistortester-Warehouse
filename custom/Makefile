@@ -22,7 +22,7 @@ PROJECT = ComponentTester
 # - ATmega 1280            : atmega1280
 # - ATmega 1284/1284P      : atmega1284
 # - ATmega 2560            : atmega2560
-MCU = atmega324pa
+MCU = atmega324p
 
 # MCU freqency:
 # - 1MHz  : 1
