@@ -22,14 +22,14 @@ PROJECT = ComponentTester
 # - ATmega 1280            : atmega1280
 # - ATmega 1284/1284P      : atmega1284
 # - ATmega 2560            : atmega2560
-MCU = atmega328
+MCU = atmega324pa
 
 # MCU freqency:
 # - 1MHz  : 1
 # - 8MHz  : 8
 # - 16MHz : 16
 # - 20MHz : 20
-FREQ = 8
+FREQ = 16
 
 # oscillator type
 # - internal RC oscillator      : RC
@@ -69,14 +69,14 @@ endif
 # - ATmega 1284   : m1284
 # - ATmega 1284P  : m1284p
 # - ATmega 2560   : m2560
-PARTNO = m328p
+PARTNO = m328pa
 
 # avrdude: ISP programmer, port and options
 
 # Arduino as ISP
-#PROGRAMMER = stk500v1
-#PORT = /dev/ttyACM0
-#OPTIONS = -b 19200
+PROGRAMMER = stk500v1
+PORT = /dev/ttyACM0
+OPTIONS = -b 19200
 
 # Bus Pirate
 #PROGRAMMER = buspirate
@@ -84,9 +84,9 @@ PARTNO = m328p
 #OPTIONS = -B 10.0
 
 # Diamex ALL-AVR/AVR-Prog
-PROGRAMMER = avrispmkII
-PORT = usb
-OPTIONS = -B 1.0
+#PROGRAMMER = avrispmkII
+#PORT = usb
+#OPTIONS = -B 1.0
 
 # Pololu USB AVR Programmer
 #PROGRAMMER = stk500v2

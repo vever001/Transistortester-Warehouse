@@ -46,7 +46,7 @@
  *  - adjust value to match your rotary encoder
  */
 
-#define ENCODER_PULSES   4
+//#define ENCODER_PULSES   4
 
 
 /*
@@ -58,7 +58,7 @@
  *  - adjust value to match your rotary encoder
  */
 
-#define ENCODER_STEPS    24
+//#define ENCODER_STEPS    24
 
 
 /*
@@ -80,7 +80,7 @@
  *    reference
  */
 
-//#define HW_REF25
+#define HW_REF25
 
 
 /*
@@ -113,7 +113,7 @@
  *  - uncomment to enable
  */
 
-//#define HW_ZENER
+#define HW_ZENER
 
 
 /*
@@ -238,7 +238,7 @@
  *  - for additional protocols also enable SW_IR_RX_EXTRA
  */
 
-//#define HW_IR_RECEIVER
+#define HW_IR_RECEIVER
 
 
 /*
@@ -247,7 +247,7 @@
  *  - uncomment to enable
  */
 
-//#define HW_ADJUST_CAP
+#define HW_ADJUST_CAP
 
 
 /*
@@ -343,7 +343,7 @@
  *  - uncomment to enable
  */
 
-#define SW_PWM_SIMPLE
+//#define SW_PWM_SIMPLE
 
 
 /*
@@ -353,7 +353,7 @@
  *  - uncomment to enable
  */
 
-//#define SW_PWM_PLUS
+#define SW_PWM_PLUS
 
 
 /*
@@ -398,7 +398,7 @@
  *  - uncomment to enable
  */
 
-//#define SW_ENCODER
+#define SW_ENCODER
 
 
 /*
@@ -418,7 +418,7 @@
  *  - uncomment to enable
  */
 
-#define SW_IR_RECEIVER
+//#define SW_IR_RECEIVER
 
 
 /*
@@ -501,7 +501,7 @@
  *  - uncomment to enable
  */
 
-//#define SW_SERVO
+#define SW_SERVO
 
 
 /*
@@ -510,7 +510,7 @@
  *  - also enable ONEWIRE_PROBES or ONEWIRE_IO_PIN (see section 'Busses')
  */
 
-//#define SW_DS18B20
+#define SW_DS18B20
 
 
 /*
@@ -539,7 +539,7 @@
  *  - uncomment to enable
  */
 
-//#define SW_CAP_LEAKAGE
+#define SW_CAP_LEAKAGE
 
 
 /*
@@ -718,7 +718,7 @@
  *  - uncomment to enable
  */
 
-//#define UI_COMMA
+#define UI_COMMA
 
 
 /*
@@ -1022,8 +1022,8 @@
  */
 
 //#define BAT_NONE
-//#define BAT_DIRECT
-#define BAT_DIVIDER
+#define BAT_DIRECT
+//#define BAT_DIVIDER
 
 
 /*
@@ -1058,7 +1058,7 @@
  *  - Schottky diode about 200mV / PNP BJT about 100mV.
  */  
 
-#define BAT_OFFSET       290
+#define BAT_OFFSET       0
 
 
 /*
@@ -1067,7 +1067,7 @@
  *  - Voltage drop BAT_OFFSET is considered in calculation.
  */
 
-#define BAT_WEAK         7400
+#define BAT_WEAK         3700
 
 
 /*
@@ -1076,7 +1076,7 @@
  *  - Voltage drop BAT_OFFSET is considered in calculation.
  */
 
-#define BAT_LOW          6400 
+#define BAT_LOW          3300 
 
 
 /*
@@ -1131,7 +1131,7 @@
  *  - standard offset is 350 Ohms
  */
 
-#define RH_OFFSET        350
+#define RH_OFFSET        700
 
 
 /*
@@ -1331,7 +1331,7 @@
  *  - uncomment either SPI_BITBANG or SPI_HARDWARE to enable
  */
 
-//#define SPI_BITBANG                /* bit-bang SPI */
+#define SPI_BITBANG                /* bit-bang SPI */
 //#define SPI_HARDWARE               /* hardware SPI */
 //#define SPI_RW                     /* enable SPI read support */
 
@@ -1355,7 +1355,7 @@
  *  - uncomment either ONEWIRE_PROBES or ONEWIRE_IO_PIN to enable
  */
 
-//#define ONEWIRE_PROBES             /* via probes */
+#define ONEWIRE_PROBES             /* via probes */
 //#define ONEWIRE_IO_PIN             /* via dedicated I/O pin */
 
 
