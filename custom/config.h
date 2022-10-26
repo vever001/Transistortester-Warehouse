@@ -718,7 +718,7 @@
  *  - uncomment to enable
  */
 
-//#define UI_COMMA
+#define UI_COMMA
 
 
 /*
