@@ -866,7 +866,7 @@
  *  - uncomment to enable
  */
 
-//#define UI_ZENER_DIODE
+#define UI_ZENER_DIODE
 
 
 /*
@@ -875,7 +875,7 @@
  *  - uncomment to enable
  */
 
-//#define UI_QUARTZ_CRYSTAL
+#define UI_QUARTZ_CRYSTAL
 
 
 /*
