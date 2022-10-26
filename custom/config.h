@@ -848,7 +848,7 @@
  *  - uncomment to enable
  */
 
-//#define UI_PINOUT_ALT
+#define UI_PINOUT_ALT
 
 
 /*
