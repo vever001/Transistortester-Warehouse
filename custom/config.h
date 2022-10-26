@@ -926,7 +926,7 @@
  *  - uncomment to enable
  */
 
-//#define UI_COLORED_TITLES
+#define UI_COLORED_TITLES
 
 
 /*
@@ -936,7 +936,7 @@
  *  - uncomment to enable
  */
 
-//#define UI_COLORED_CURSOR
+#define UI_COLORED_CURSOR
 
 
 /*
