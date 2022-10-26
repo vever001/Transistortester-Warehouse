@@ -829,7 +829,7 @@
  *  - uncomment to enable, also adjust timeout (in s)
  */
 
-//#define POWER_OFF_TIMEOUT     60
+#define POWER_OFF_TIMEOUT     60
 
 
 /*
