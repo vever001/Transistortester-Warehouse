@@ -69,14 +69,14 @@ endif
 # - ATmega 1284   : m1284
 # - ATmega 1284P  : m1284p
 # - ATmega 2560   : m2560
-PARTNO = m328p
+PARTNO = m324pa
 
 # avrdude: ISP programmer, port and options
 
 # Arduino as ISP
-#PROGRAMMER = stk500v1
-#PORT = /dev/ttyACM0
-#OPTIONS = -b 19200
+PROGRAMMER = stk500v1
+PORT = /dev/ttyACM0
+OPTIONS = -b 19200
 
 # Bus Pirate
 #PROGRAMMER = buspirate
@@ -84,9 +84,9 @@ PARTNO = m328p
 #OPTIONS = -B 10.0
 
 # Diamex ALL-AVR/AVR-Prog
-PROGRAMMER = avrispmkII
-PORT = usb
-OPTIONS = -B 1.0
+#PROGRAMMER = avrispmkII
+#PORT = usb
+#OPTIONS = -B 1.0
 
 # Pololu USB AVR Programmer
 #PROGRAMMER = stk500v2
