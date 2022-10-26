@@ -80,7 +80,7 @@
  *    reference
  */
 
-//#define HW_REF25
+#define HW_REF25
 
 
 /*
@@ -113,7 +113,7 @@
  *  - uncomment to enable
  */
 
-//#define HW_ZENER
+#define HW_ZENER
 
 
 /*
@@ -124,9 +124,9 @@
  *  - uncomment to enable and adjust resistor values
  */
 
-//#define ZENER_DIVIDER_CUSTOM
-#define ZENER_R1         180000
-#define ZENER_R2         20000
+#define ZENER_DIVIDER_CUSTOM
+#define ZENER_R1         100000
+#define ZENER_R2         12000
 
 
 /*
@@ -136,7 +136,7 @@
  *  - uncomment to enable
  */
 
-//#define ZENER_UNSWITCHED
+#define ZENER_UNSWITCHED
 
 
 /*
@@ -238,7 +238,7 @@
  *  - for additional protocols also enable SW_IR_RX_EXTRA
  */
 
-//#define HW_IR_RECEIVER
+#define HW_IR_RECEIVER
 
 
 /*
@@ -247,7 +247,7 @@
  *  - uncomment to enable
  */
 
-//#define HW_ADJUST_CAP
+#define HW_ADJUST_CAP
 
 
 /*
@@ -418,7 +418,7 @@
  *  - uncomment to enable
  */
 
-#define SW_IR_RECEIVER
+//#define SW_IR_RECEIVER
 
 
 /*
@@ -1022,8 +1022,8 @@
  */
 
 //#define BAT_NONE
-//#define BAT_DIRECT
-#define BAT_DIVIDER
+#define BAT_DIRECT
+//#define BAT_DIVIDER
 
 
 /*
@@ -1058,7 +1058,7 @@
  *  - Schottky diode about 200mV / PNP BJT about 100mV.
  */  
 
-#define BAT_OFFSET       290
+#define BAT_OFFSET       0
 
 
 /*
@@ -1067,7 +1067,7 @@
  *  - Voltage drop BAT_OFFSET is considered in calculation.
  */
 
-#define BAT_WEAK         7400
+#define BAT_WEAK         3600
 
 
 /*
@@ -1076,7 +1076,7 @@
  *  - Voltage drop BAT_OFFSET is considered in calculation.
  */
 
-#define BAT_LOW          6400 
+#define BAT_LOW          3400 
 
 
 /*

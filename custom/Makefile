@@ -22,14 +22,14 @@ PROJECT = ComponentTester
 # - ATmega 1280            : atmega1280
 # - ATmega 1284/1284P      : atmega1284
 # - ATmega 2560            : atmega2560
-MCU = atmega328
+MCU = atmega324p
 
 # MCU freqency:
 # - 1MHz  : 1
 # - 8MHz  : 8
 # - 16MHz : 16
 # - 20MHz : 20
-FREQ = 8
+FREQ = 16
 
 # oscillator type
 # - internal RC oscillator      : RC

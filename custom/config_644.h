@@ -153,7 +153,7 @@
  *  - SPI interface using hardware SPI
  */
 
-//#if 0
+#if 0
 #define LCD_ILI9341                     /* display controller ILI9341/ILI9342 */
 #define LCD_GRAPHIC                     /* graphic display */
 #define LCD_COLOR                       /* color display */
@@ -186,7 +186,7 @@
 //#define SYMBOLS_24X24_ALT1_HF  /* test */
 /* SPI bus */
 #define SPI_HARDWARE                    /* hardware SPI */
-//#endif
+#endif
 
 
 
@@ -723,7 +723,7 @@
  *  - 4 wire SPI interface using hardware SPI
  */
 
-#if 0
+//#if 0
 #define LCD_ST7735                      /* display controller ST7735 */
 #define LCD_GRAPHIC                     /* graphic display */
 #define LCD_COLOR                       /* color display */
@@ -731,21 +731,21 @@
 /* control and data lines */
 #define LCD_PORT         PORTB          /* port data register */
 #define LCD_DDR          DDRB           /* port data direction register */
-#define LCD_RES          PB2            /* port pin used for /RESX (optional) */
-#define LCD_CS           PB4            /* port pin used for /CSX (optional) */
-#define LCD_DC           PB3            /* port pin used for D/CX */
+#define LCD_RES          PB4            /* port pin used for /RESX (optional) */
+//#define LCD_CS           PB?            /* port pin used for /CSX (optional) */
+#define LCD_DC           PB5            /* port pin used for D/CX */
 #define LCD_SCL          PB7            /* port pin used for SCL */
-#define LCD_SDA          PB5            /* port pin used for SDA */
+#define LCD_SDA          PB6            /* port pin used for SDA */
 /* display settings */
 #define LCD_DOTS_X       128            /* number of horizontal dots */
 #define LCD_DOTS_Y       160            /* number of vertical dots */
-//#define LCD_OFFSET_X     4               /* enable x offset of 2 or 4 dots */
-//#define LCD_OFFSET_Y     2               /* enable y offset of 1 or 2 dots */
+#define LCD_OFFSET_X     2               /* enable x offset of 2 or 4 dots */
+#define LCD_OFFSET_Y     1               /* enable y offset of 1 or 2 dots */
 //#define LCD_FLIP_X                      /* enable horizontal flip */
 #define LCD_FLIP_Y                      /* enable vertical flip */
 #define LCD_ROTATE                      /* switch X and Y (rotate by 90°) */
 //#define LCD_BGR                         /* reverse red and blue color channels */
-//#define LCD_LATE_ON                     /* turn on LCD after clearing it */
+#define LCD_LATE_ON                     /* turn on LCD after clearing it */
 /* font and symbols: horizontally aligned & flipped */
 #define FONT_10X16_HF                   /* 10x16 font */
 //#define FONT_6X8_ISO8859_2_HF           /* 6x8 Central European font */
@@ -762,8 +762,13 @@
 //#define SYMBOLS_32X32_ALT1_HF           /* 32x32 alternative symbols #1 */
 //#define SYMBOLS_32X32_ALT2_HF           /* 32x32 alternative symbols #2 */
 /* SPI bus */
-#define SPI_HARDWARE                    /* hardware SPI */
-#endif
+//#define SPI_HARDWARE                    /* hardware SPI */
+#define SPI_BITBANG                     /* bit-bang SPI */
+#define SPI_PORT         LCD_PORT       /* SPI port data register */
+#define SPI_DDR          LCD_DDR        /* SPI port data direction register */
+#define SPI_SCK          LCD_SCL        /* port pin used for SCK */
+#define SPI_MOSI         LCD_SDA        /* port pin used for MOSI */
+//#endif
 
 
 
@@ -973,8 +978,8 @@
 #define TP2              PA1       /* test pin / probe #2 */
 #define TP3              PA2       /* test pin / probe #3 */
 
-#define TP_ZENER         PA3       /* test pin for for Zener check (10:1 voltage divider) */
-#define TP_REF           PA4       /* test pin for 2.5V reference and relay */
+#define TP_ZENER         PA4       /* test pin for for Zener check (10:1 voltage divider) */
+#define TP_REF           PA3       /* test pin for 2.5V reference and relay */
 #define TP_BAT           PA5       /* test pin for battery (4:1 voltage divider) */
 #define TP_CAP           PA7       /* test pin for self-adjustment cap */
 #define TP_LOGIC         PA6       /* test pin for Logic Probe (4:1 voltage divider) */
@@ -986,14 +991,14 @@
  *  - Don't share this port with POWER_CTRL or TEST_BUTTON!
  */
 
-#define R_PORT           PORTD     /* port data register */
-#define R_DDR            DDRD      /* port data direction register */
-#define R_RL_1           PD2       /* Rl (680R) for test pin #1 */
-#define R_RH_1           PD3       /* Rh (470k) for test pin #1 */
-#define R_RL_2           PD4       /* Rl (680R) for test pin #2 */
-#define R_RH_2           PD5       /* Rh (470k) for test pin #2 */
-#define R_RL_3           PD6       /* Rl (680R) for test pin #3 */
-#define R_RH_3           PD7       /* Rh (470k) for test pin #3 */
+#define R_PORT           PORTC     /* port data register */
+#define R_DDR            DDRC      /* port data direction register */
+#define R_RL_1           PC0       /* Rl (680R) for test pin #1 */
+#define R_RH_1           PC1       /* Rh (470k) for test pin #1 */
+#define R_RL_2           PC2       /* Rl (680R) for test pin #2 */
+#define R_RH_2           PC3       /* Rh (470k) for test pin #2 */
+#define R_RL_3           PC4       /* Rl (680R) for test pin #3 */
+#define R_RH_3           PC5       /* Rh (470k) for test pin #3 */
 
 
 /*
@@ -1011,9 +1016,9 @@
  *  - can't be same port as ADC_PORT or R_PORT
  */
 
-#define POWER_PORT       PORTC     /* port data register */
-#define POWER_DDR        DDRC      /* port data direction register */
-#define POWER_CTRL       PC6       /* control pin (1: on / 0: off) */
+#define POWER_PORT       PORTD     /* port data register */
+#define POWER_DDR        DDRD      /* port data direction register */
+#define POWER_CTRL       PD2       /* control pin (1: on / 0: off) */
 
 
 /*
@@ -1021,10 +1026,10 @@
  *  - can't be same port as ADC_PORT or R_PORT
  */
 
-#define BUTTON_PORT      PORTC     /* port data register */
-#define BUTTON_DDR       DDRC      /* port data direction register */
-#define BUTTON_PIN       PINC      /* port input pins register */
-#define TEST_BUTTON      PC7       /* test/start push button (low active) */
+#define BUTTON_PORT      PORTD     /* port data register */
+#define BUTTON_DDR       DDRD      /* port data direction register */
+#define BUTTON_PIN       PIND      /* port input pins register */
+#define TEST_BUTTON      PD1       /* test/start push button (low active) */
 
 
 /*
@@ -1095,10 +1100,10 @@
  *  - fixed module connected to dedicated I/O pin
  */
 
-#define IR_PORT          PORTC     /* port data register */
-#define IR_DDR           DDRC      /* port data direction register */
-#define IR_PIN           PINC      /* port input pins register */
-#define IR_DATA          PC2       /* data signal */
+#define IR_PORT          PORTD     /* port data register */
+#define IR_DDR           DDRD      /* port data direction register */
+#define IR_PIN           PIND      /* port input pins register */
+#define IR_DATA          PD3       /* data signal */
 
 
 /*
@@ -1177,7 +1182,7 @@
 
 #define ADJUST_PORT      PORTC     /* port data register */
 #define ADJUST_DDR       DDRC      /* port data direction register */
-#define ADJUST_RH        PC5       /* Rh (470k) for fixed cap */
+#define ADJUST_RH        PC6       /* Rh (470k) for fixed cap */
 
 
 /*
